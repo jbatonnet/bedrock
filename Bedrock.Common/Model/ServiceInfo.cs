@@ -17,7 +17,6 @@ namespace Bedrock.Shared
         public string Name { get; set; }
         public string Description { get; set; }
         public Type Type { get; set; }
-        public bool Favorite { get; set; }
 
         public DeviceInfo Device { get; set; }
         public Service Service { get; set; }
@@ -29,13 +28,12 @@ namespace Bedrock.Shared
             Id = id;
             Device = device;
         }
-        public ServiceInfo(DeviceInfo device, Guid id, string name, string description = null, bool favorite = false, Type type = null)
+        public ServiceInfo(DeviceInfo device, Guid id, string name, string description = null, Type type = null)
         {
             Id = id;
             Name = name;
             Description = description;
             Device = device;
-            Favorite = favorite;
             Type = type;
         }
 

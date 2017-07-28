@@ -187,9 +187,7 @@ namespace Bedrock.Shared
 
         public override string ToString()
         {
-            return "";
-            //string method = Method.GetType().GetCustomAttribute<RemoteDeviceAttribute>().Method;
-            //return $"{method}://{Address}, {Param1}, {Param2}, {Param3}, {Param4}";
+            return $"{Method}://{Address}";
         }
     }
 
