@@ -6,10 +6,18 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-using Bedrock.Common;
-
-namespace Bedrock.Shared
+namespace Bedrock.Common
 {
+    public class LinkMethodAttribute : Attribute
+    {
+        public string Method { get; }
+
+        public LinkMethodAttribute(string method)
+        {
+            Method = method;
+        }
+    }
+
     public abstract class PathNodeInfo
     {
         public DeviceInfo Destination { get; protected set; }
@@ -176,12 +184,20 @@ namespace Bedrock.Shared
             Type type = parameters.GetType();
             PropertyInfo[] properties = type.GetProperties();
 
-            foreach (PropertyInfo property in properties)
+            if (parameters is IEnumerable<KeyValuePair<string, object>> parametersDictionary)
             {
-                string name = property.Name;
-                object value = property.GetValue(parameters);
+                foreach (var pair in parametersDictionary)
+                    Parameters.Add(pair.Key, pair.Value);
+            }
+            else
+            {
+                foreach (PropertyInfo property in properties)
+                {
+                    string name = property.Name;
+                    object value = property.GetValue(parameters);
 
-                Parameters.Add(name.ToLower(), value);
+                    Parameters.Add(name.ToLower(), value);
+                }
             }
         }
 

@@ -5,10 +5,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 
-using Bedrock.Common;
-using Bedrock.Shared;
-
-namespace Bedrock.Shared
+namespace Bedrock.Common
 {
     [TypeConverter("Bedrock.Shared." + nameof(ServiceInfoConverter))]
     public class ServiceInfo

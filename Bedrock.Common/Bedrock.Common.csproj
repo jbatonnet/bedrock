@@ -52,11 +52,13 @@
     <Compile Include="Basic\BasicDevice.cs" />
     <Compile Include="Basic\BasicDeviceHub.cs" />
     <Compile Include="Basic\BasicService.cs" />
+    <Compile Include="Model\Connection.cs" />
     <Compile Include="Model\DeviceHub.cs" />
     <Compile Include="Model\Device.cs" />
     <Compile Include="Model\DeviceInfo.cs" />
     <Compile Include="Model\LinkInfo.cs" />
     <Compile Include="Model\Security\User.cs" />
+    <Compile Include="Model\ServerInfo.cs" />
     <Compile Include="Model\Service.cs" />
     <Compile Include="Model\ServiceInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

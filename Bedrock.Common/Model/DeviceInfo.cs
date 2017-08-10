@@ -5,9 +5,7 @@ using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
-using Bedrock.Common;
-
-namespace Bedrock.Shared
+namespace Bedrock.Common
 {
     /// <summary>
     /// Describes a Bedrock device
