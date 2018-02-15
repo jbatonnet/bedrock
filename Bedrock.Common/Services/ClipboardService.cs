@@ -22,6 +22,11 @@ namespace Bedrock.Common
             Type = type;
             Value = value;
         }
+
+        public static implicit operator ClipboardData(string text)
+        {
+            return new ClipboardData(ClipboardDataType.Text, text);
+        }
     }
 
     public abstract class ClipboardService : Service

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bedrock.Common
 {
@@ -36,8 +33,8 @@ namespace Bedrock.Common
                 return id.Value;
             }
         }
-        public virtual string Name { get; set; }
-        public virtual string Description { get; set; }
+        public virtual string Name { get; }
+        public virtual string Description { get; }
 
         private Guid? id;
 
